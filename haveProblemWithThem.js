@@ -282,7 +282,8 @@
 // console.log("2" == 2);
 // console.log("2" === 2);
 // console.log(+"2"); //todo hard
-// console.log(+"abc");//todo hard
+// console.log(+"adil"); //todo hard
+// console.log(+""); //todo hard
 
 
 

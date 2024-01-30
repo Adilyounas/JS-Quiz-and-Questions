@@ -1725,6 +1725,42 @@
 // }
 // console.log(data);
 
+
+//my own logic 
+
+// const removeFirstNonMale = (data) => {
+//   const firstNonMaleVal = data.find((item) => item.gender !== "male");
+
+//   if (firstNonMaleVal) {
+//     return data.filter((val) => val !== firstNonMaleVal);
+//   }
+// };
+
+// const data = [
+//   {
+//     id: 1,
+//     gender: "trans",
+//   },
+//   {
+//     id: 2,
+//     gender: "male",
+//   },
+//   {
+//     id: 3,
+//     gender: "female",
+//   },
+// ];
+
+// console.log(removeFirstNonMale(data));
+
+
+
+
+
+
+
+
+
 //? Q:12 Write a JavaScript function to clone an array
 
 //create a copy if an array using function
