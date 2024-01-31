@@ -1821,6 +1821,19 @@
 
 // giveFirstElementOfArray(data, 5);
 
+
+//todo own logic
+
+
+// const printElement = (arr, n = 1) => {
+//   for (let i = 0; i < n; i++) {
+//     console.log(arr[i]);
+//   }
+// };
+
+// const data = [10, 20, 453, 54, 530];
+// printElement(data, 2);
+
 //? Q:14 Write a JavaScript function to get the last element of array on given n if n = 5 then last five elements of array
 
 // const giveLastElementsOfArray = (arr,n=1) => {

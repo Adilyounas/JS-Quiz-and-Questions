@@ -433,3 +433,114 @@
 // ];
 
 // console.log(removeFirstNonMale(data));
+
+//? Q:12 Write a JavaScript function which accepts an argument and returns the type
+
+// const giveMeType = (val)=>{
+//     return typeof val
+// }
+// const val= +undefined
+// const result = giveMeType(val)
+// console.log(result);
+
+//? Q:13 Write a JavaScript function to get the first element of array (second parameter is n and print elements of array times n equal)
+//give first element of array if n=1 (which by default is 1)
+
+// const printElement = (arr, n = 1) => {
+//   for (let i = 0; i < n; i++) {
+//     console.log(arr[i]);
+//   }
+// };
+
+// const data = [10, 20, 453, 54, 530];
+// printElement(data, 2);
+
+//? Q:14 Write a JavaScript function to get the last element of array on given n if n = 5 then last five elements of array
+
+// const giveMeLast_N_Element = (data, n = 1) => {
+//   for (let i = data.length - n; i < data.length; i++) {
+//     console.log(data[i]);
+//   }
+// };
+
+// const data = [1, 2, 3, 0, 10];
+// giveMeLast_N_Element(data, 2);
+
+//! <--- hard -->  Q:15 Write a JavaScript program to find the most frequent item of an array (most biggest one)
+
+// const countFrequency = (arr) => {
+//   let freq = {};
+
+//   arr.forEach((ele) => {
+//     if (freq.hasOwnProperty(ele) === false) {
+//       freq[ele] = 1;
+//     } else {
+//       freq[ele] = freq[ele] + 1;
+//     }
+//   });
+
+//   const highestFreq = Object.keys(freq).reduce((acc, item) => {
+//     return freq[acc] > freq[item] ? acc : item;
+//   });
+
+//   console.log(highestFreq);
+// };
+
+// const data = [1, 2, 3, 3, 3, 2, 1, 1, 1, 1];
+// countFrequency(data);
+
+//? Q:16 Write a JavaScript program that shuffle an array
+
+//todo The Fisher-Yates shuffle, also known as the Knuth shuffle, is an algorithm for generating a random permutation of a finite set—in other words, for randomly shuffling the elements of an array. It was designed by Ronald A. Fisher and Frank Yates and later popularized by Donald E. Knuth in his book "The Art of Computer Programming."
+
+// const shuffleArr = (arr) => {
+//   for (let i = arr.length-1; i >=0; i--) {
+//     const randomNumber = Math.floor(Math.random() * (i+1));
+//     [arr[i], arr[randomNumber]] = [arr[randomNumber], arr[i]];
+//   }
+
+//   return arr;
+// };
+
+// const data = [1, 2, 3, 4, 5];
+// const result = shuffleArr(data);
+// console.log(result);
+
+//? Q19: find the prime number 
+
+
+// const isPrimeNumber = (number)=>{
+
+//         if (number<=1) {
+//             return false
+//         }
+
+//         for (let i = 2; i < number; i++) {
+//            if (number%i===0) {
+//             return false
+//            }
+            
+//         }
+
+//         return true
+// }
+
+
+// const n = 1132
+// console.log(isPrimeNumber(n));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
