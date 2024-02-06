@@ -506,8 +506,7 @@
 // const result = shuffleArr(data);
 // console.log(result);
 
-//? Q19: find the prime number 
-
+//? Q19: find the prime number
 
 // const isPrimeNumber = (number)=>{
 
@@ -519,28 +518,12 @@
 //            if (number%i===0) {
 //             return false
 //            }
-            
+
 //         }
 
 //         return true
 // }
 
-
 // const n = 1132
 // console.log(isPrimeNumber(n));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

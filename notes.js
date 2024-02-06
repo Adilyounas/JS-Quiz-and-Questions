@@ -1,54 +1,198 @@
+//todo _____ What are functions in js and tell me its types ?
+
+//? 1 Function Statement / function declaration
+//classic way to create a function with function keyword
+
+// function a(){
+//   console.log("Function Statement / function declaration");
+// }
+// a()
+
+//? 2 Function expression
+//Store a anonymous function in a variable, and treate the variable as a function is a function expresstion way
+
+// const a = function () {
+//   console.log("function Expression");
+// };
+// a();
+
+//? 3 Anonymous Function
+//A function without a name is called anonymous function, but you can't use it bearly, it can be use in methods of object or as a function expression form.
+
+// function(){
+
+// }
+
+//? 4 Named Function Expression
+// create a function expresstion and store into a variable is form Named function experssion
+
+// const named = function xyx(){
+
+// }
+
+// xyx() //guess the output
+
+// const named = function xyx(){
+// console.log(a,b);
+// }
+
+// named(1,2) //guess the output
+
+// const named = function xyx() {
+//   return xyx;
+// };
+
+// const result = named();
+// console.log(result); //guess the output
+
+//? 5 First Class Function
+
+// In JavaScript, first-class functions refer to the concept that functions are treated as first-class citizens. This means that functions can be:
+
+//* 1 store in a variable or assign into variable
+
+// const greet = function(name) {
+//   console.log(`Hello, ${name}!`);
+// };
+
+// */ 2 Passed as arguments to other functions:
+
+// function executeFunction(func) {
+//   func();
+// }
+
+// executeFunction(greet);
+
+//* 3 Returned from other functions:
+
+// function createGreetingFunction() {
+//   return function(name) {
+//       console.log(`Hello, ${name}!`);
+//   };
+// }
+
+// const greetFunction = createGreetingFunction();
+// greetFunction('John');
+
+
+//* 4 Stored in data structures:
+
+// const functionsArray = [greet, someOtherFunction, anotherFunction];
+
+
+//? 6 Arrow Function
+//they have arrow in their syntax
+
+// const arrow = ()=>{
+//   console.log("Hello Thier i am a fate arrow function");
+// }
+
+// arrow()
+
+//? 7 Higher Order Function
+
+// // Higher-order function: Takes a function as an argument
+// function operateOnNumbers(a, b, operation) {
+//   return operation(a, b);
+// }
+
+// // Functions to pass as arguments
+// function add(x, y) {
+//   return x + y;
+// }
+
+// function multiply(x, y) {
+//   return x * y;
+// }
+
+// // Using the higher-order function with different operations
+// const resultAddition = operateOnNumbers(3, 4, add);
+// console.log(resultAddition);  // Output: 7
+
+// const resultMultiplication = operateOnNumbers(3, 4, multiply);
+// console.log(resultMultiplication);  // Output: 12
+
+
 //todo <-------------    JS Operators   ----------------->
 
 //todo => Arithmetic Operators
 
+//? Q: How can you find power of any Integer
+
 // let resultA = Math.pow(2, 3);
 // console.log(resultA);
 
+//? Q: find square root of 25 ?
+
 // let resultBx = Math.sqrt(25);
 // console.log(resultBx);
+
+//? Q: Guess the out put?
 
 // let x = 5;
 // let y = 10;
 // let resultAx = x > 0 && (y = 20);
 // console.log(resultAx); // Output: true, y remains 10 (short-circuit prevents assignment)
 
+//? Q: Guess the out put?
+
 // let num = 15;
 // let isBetween = num >= 10 && num <= 20;
 // console.log(isBetween);
 
-// const resutl = 5 + 3 * 2 / (4 - 1) + 5 + ((3 * 2) / (4 - 1))
+//? Q: Guess the out put?
 
+// const resutl = 5 + 3 * 2 / (4 - 1) + 5 + ((3 * 2) / (4 - 1))
 // console.log(resutl);
+
+//? Q: Guess the out put?
 
 // let remainder = 17 % 3;
 // console.log(remainder);
+
+//? Q: Guess the out put?
 
 // let resultB = 2 ** 3;
 // console.log(resultB);
 
 //todo => Comparison Operators
 
+//? Q: Guess the out put?
+
 // console.log("5" == 5); // Output: false
 // console.log(5 !== "5"); // Output: true
+
+//? Q: Guess the out put?
 
 // let x = 10;
 // let y = "10";
 // console.log(x !== y); // Output: false
 
+//? Q: Guess the out put?
+
 // console.log(!(3 > 5)); // Output: true
 
+//? Q: Guess the out put?
+
 // console.log(true && false); // Output: false
+
+//? Q: Guess the out put?
 
 // let a = 5;
 // let b = "5";
 // console.log(a == b); // Output: true
 
+//? Q: Guess the out put?
+
 // console.log(NaN === NaN); // Output: false
 // console.log(NaN == NaN); // Output: false
 
+//? Q: Guess the out put?
+
 // console.log(null === undefined); // Output: false
 // console.log(undefined == null); // Output: true
+
+//? Q: Guess the out put?
 
 // let value = "Not a Number";
 // console.log(isNaN(value));          // Output: true
@@ -56,33 +200,46 @@
 
 //todo => Logical Operators
 
+//? Q: Guess the out put?
+
 // let x = 5;
 // let y = 10;
 // let resultAND = x > 0 && y > 0;
 // console.log(resultAND);
 
+//? Q: Guess the out put?
+
 // let num = 15;
 // let isBetween = num > 10 && num < 20;
 // console.log(isBetween);
+
+//? Q: Guess the out put?
 
 // let a = 8;
 // let b = 7;
 // let resultOR = a > 5 || b < 10;
 // console.log(resultOR);
 
+//? Q: Guess the out put?
+
 // let value = "Hello";
 // let isStringOrNumber = typeof value === "string" || typeof value === "number";
 // console.log(isStringOrNumber);
 
+//? Q: Guess the out put?
+
 // let numberx = 5;
 // let notEqualZero = !(numberx === 0);
 // console.log(notEqualZero);
+
+//? Q: Guess the out put?
 
 // let falsyValue = null;
 // let isNotFalsy = !!falsyValue;
 // console.log(isNotFalsy);
 
 // //short-circuit
+//? Q: Guess the out put?
 
 // let x = 5;
 // let y = 10;
@@ -90,11 +247,29 @@
 // console.log(resultAND); // Output: true, y remains 10 (short-circuit prevents assignment)
 // console.log(y); // Output: 10 (y is not assigned 20)
 
+//? Q: Guess the out put?
+
+// let x = 5;
+// let y = 10;
+// let resultAND = (y = 20) && x > 0 ;
+// console.log(resultAND);
+
+//? Q: Guess the out put?
+
 // let a = true;
 // let b = false;
 // let resultOR = a || (b = true);
 // console.log(resultOR); // Output: true, b remains false (short-circuit prevents assignment)
 // console.log(b); // Output: false (b is not assigned true)
+
+//? Q: Guess the out put?
+
+// let a = true;
+// let resultOR = a || (b = true);
+// console.log(resultOR);
+// console.log(b);
+
+//? Q: Guess the out put?
 
 // function greet(name) {
 //   name = name || "Guest";
@@ -106,44 +281,67 @@
 
 //todo => Assignment Operators
 
+//? Q: Guess the out put?
+
 // let x = 5;
 // let y = "Hello";
 // let z = true;
+
+//? Q: Guess the out put?
 
 // let a = 10;
 // a += 5; // Equivalent to a = a + 5;
 // console.log(a);
 
+//? Q: Guess the out put?
+
 // let b = 20;
 // b -= 8; // Equivalent to b = b - 8;
 // console.log(b);
+
+//? Q: Guess the out put?
 
 // let c = 3;
 // c *= 4; // Equivalent to c = c * 4;
 // console.log(c);
 
+//? Q: Guess the out put?
+
 // let d = 24;
 // d /= 3; // Equivalent to d = d / 3;
 // console.log(d);
+//? Q: Guess the out put?
 
 // let e = 17;
 // e %= 5; // Equivalent to e = e % 5;
 // console.log(e);
 
+//? Q: Guess the out put?
+
 // let f = 2;
 // f **= 3; // Equivalent to f = f ** 3;
 // console.log(f);
+
+//? Q: Guess the out put?
 
 // let person = { name: "John", age: 30 };
 // let { name, age } = person;
 // console.log(name);
 // console.log(age);
 
+//? Q: Guess the out put?
+
 // let numbers = [1, 2, 3];
 // let [first, second, third] = numbers;
 // console.log(first);
 // console.log(second);
 // console.log(third);
+
+//? Q: Guess the out put?
+
+// let numbers = [1, 2, 3];
+// let [,first] = numbers;
+// console.log(first);
 
 //todo => Unary Operators
 
@@ -268,6 +466,14 @@
 // const merge = {...data,...info}
 // console.log(merge);
 
+//todo ?- 14
+
+// const obj = {
+//   age:34,
+//   age:90
+// }
+// console.log(obj);
+
 //todo ?- 15
 
 // const data = {name:"Anil",age:25,skill:"Js"}
@@ -296,6 +502,8 @@
 // const result = false || {} || null
 
 // const result = false || undefined || null
+
+// const result = false || -77 || null
 
 // console.log(result);
 
@@ -879,6 +1087,13 @@
 // console.log(obj.hasOwnProperty("1"));
 // console.log(obj.hasOwnProperty(1));
 
+// todo ?- 95  <--- hard -->  mistage
+
+// const obj = {
+//   "adil":20
+// }
+
+// console.log(obj.adil);
 // todo ?- 96
 
 // const obj = {a:"one",b:"two",a:"repeat"}
@@ -1725,8 +1940,7 @@
 // }
 // console.log(data);
 
-
-//my own logic 
+//my own logic
 
 // const removeFirstNonMale = (data) => {
 //   const firstNonMaleVal = data.find((item) => item.gender !== "male");
@@ -1752,14 +1966,6 @@
 // ];
 
 // console.log(removeFirstNonMale(data));
-
-
-
-
-
-
-
-
 
 //? Q:12 Write a JavaScript function to clone an array
 
@@ -1821,9 +2027,7 @@
 
 // giveFirstElementOfArray(data, 5);
 
-
 //todo own logic
-
 
 // const printElement = (arr, n = 1) => {
 //   for (let i = 0; i < n; i++) {
@@ -1943,7 +2147,6 @@
 
 //? Q18: What would you need to change in the code to make it calculate the dates for a specific week, given a start date for that week?
 
-
 // function getCurrentWeekDates() {
 //   const currentDate = new Date();
 //   const currentDay = currentDate.getDay();
@@ -1968,10 +2171,7 @@
 
 // getCurrentWeekDates();
 
-
-//? Q19: find the prime number 
-
-
+//? Q19: find the prime number
 
 // function isPrime(number) {
 //   if (number <= 1) {
@@ -1987,4 +2187,83 @@
 //   return true;
 // }
 
-// console.log(isPrime(30)); 
+// console.log(isPrime(30));
+
+//? Q20 : What is binary search give an example
+
+// function binarySearch(arr, target) {
+//   let left = 0;
+//   let right = arr.length - 1;
+
+//   while (left <= right) {
+//       let mid = Math.floor((left + right) / 2);
+
+//       if (arr[mid] === target) {
+//           return mid;
+//       } else if (arr[mid] < target) {
+//           left = mid + 1;
+//       } else {
+//           right = mid - 1;
+//       }
+//   }
+
+//   return -1; // Element not found
+// }
+
+// let sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let targetValue = 5;
+// console.log(binarySearch(sortedArray, targetValue));
+
+//? Q21 : What is binary search give an example
+
+// function fizzBuzz(n) {
+//   for (let i = 1; i <= n; i++) {
+//       if (i % 3 === 0 && i % 5 === 0) {
+//           console.log("FizzBuzz");
+//       } else if (i % 3 === 0) {
+//           console.log("Fizz");
+//       } else if (i % 5 === 0) {
+//           console.log("Buzz");
+//       } else {
+//           console.log(i);
+//       }
+//   }
+// }
+
+// fizzBuzz(15);
+
+//? Q22 : Random Number within a Range
+
+// function getRandomNumber(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+
+// // Example usage
+// let randomNum = getRandomNumber(10, 20);
+// console.log(randomNum);
+
+//? Q23 : What is binary search give an example
+
+// function flattenArray(arr) {
+//   return arr.reduce((flat, current) => flat.concat(Array.isArray(current) ? flattenArray(current) : current), []);
+// }
+
+// // Example usage
+// let nestedArray = [1, [2, [3, 4], 5], 6];
+// let flattenedArray = flattenArray(nestedArray);
+// console.log(flattenedArray);
+
+//? Q24 :Generate Fibonacci Sequence
+//todo => Generating a Fibonacci sequence involves creating a series of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1. The sequence goes: 0, 1, 1, 2, 3, 5, 8, 13, 21, and so on.
+
+// function fibonacci(n) {
+//   let sequence = [0, 1];
+//   for (let i = 2; i < n; i++) {
+//       sequence[i] = sequence[i - 1] + sequence[i - 2];
+//   }
+//   return sequence;
+// }
+
+// // Example usage
+// let fibSequence = fibonacci(8);
+// console.log(fibSequence);

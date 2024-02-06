@@ -42,7 +42,6 @@
 
 //todo ?- 6  <--- hard --->
 
-
 //todo ?- 26
 
 // console.log(false == undefined);
@@ -50,8 +49,6 @@
 
 // var a
 // console.log(a == undefined);
-
-
 
 // todo ?- 35
 //check any value is odd or even
@@ -84,7 +81,6 @@
 // let b = 1
 // let c = 2
 // console.log(a===b===--c);
-
 
 // todo ?- 90
 
@@ -132,7 +128,6 @@
 // const members = person
 // person.name= "ending"
 // console.log(members);
-
 
 //todo ?- 139  <-- hard --> mistak
 
@@ -254,7 +249,7 @@
 // console.log(null + undefined);
 // console.log(typeof (3 + 4 + +"5"));
 // console.log(undefined == null);
-// console.log("hellppo" <= "world"); 
+// console.log("hellppo" <= "world");
 // console.log(+true);
 // console.log(typeof +true);
 // console.log(typeof +null);
@@ -284,6 +279,54 @@
 // console.log(+"2"); //todo hard
 // console.log(+"adil"); //todo hard
 // console.log(+""); //todo hard
+
+//todo <--------------- again practice if there is a problem in it then these following question are also part of have problem with ----------------->
+// console.log(typeof null);
+
+// let data = ["anil","peter","bruce"]
+// delete data[1]
+// console.log(data);
+
+// let c = 3^3
+// console.log(c);
+
+// let a = 1
+// let c = 20
+// console.log(a- ++c);
+// console.log(a - - c);
+// console.log(--c===a);
+
+// let a = 1;
+// let b = 1;
+// let c = 2;
+// console.log((a === b) === --c);
+
+// let o = undefined
+// for (var i = 0; i < 3; i++) {
+//     o=i
+// }
+// setTimeout(() => {
+//   console.log(o);
+//   console.log(i);
+// }, 0);
+
+
+// for(let i=1; i<5;i++){
+//   if (i===3) continue
+
+//   console.log(i);
+// }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
