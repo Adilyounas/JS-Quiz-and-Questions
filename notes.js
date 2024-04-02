@@ -74,11 +74,9 @@
 // const greetFunction = createGreetingFunction();
 // greetFunction('John');
 
-
 //* 4 Stored in data structures:
 
 // const functionsArray = [greet, someOtherFunction, anotherFunction];
-
 
 //? 6 Arrow Function
 //they have arrow in their syntax
@@ -111,7 +109,6 @@
 
 // const resultMultiplication = operateOnNumbers(3, 4, multiply);
 // console.log(resultMultiplication);  // Output: 12
-
 
 //todo <-------------    JS Operators   ----------------->
 
@@ -615,6 +612,27 @@
 // Object.seal(person)
 // person.age = 25
 // console.log(person);
+
+//todo ?- 32
+
+// Creating a target object
+// let target = { a: 1, b: 2 };
+
+// // Creating a source object
+// let source = { b: 3, c: 4 };
+
+// // Using Object.assign to copy properties from source to target
+// let result = Object.assign(target, source);
+
+// console.log(result);  // Output: { a: 1, b: 3, c: 4 }
+// console.log(target);  // Output: { a: 1, b: 3, c: 4 }
+
+//todo ?- 32
+
+// let currentState = { count: 1 };
+// let newState = Object.assign({}, currentState, { count: currentState.count + 1 });
+
+// console.log(newState);
 
 // todo ?- 33
 // let data = [2,9,0,10]
@@ -1638,7 +1656,7 @@
 
 // setTimeout(piyush.sayName.bind(piyush),3*1000)
 
-//this is closure function
+// this is closure function
 // setTimeout(()=>piyush.sayName(),3*1000)
 
 //todo ?- 146
@@ -1705,6 +1723,31 @@
 
 // console.log( myMap.get("a"));
 
+//todo ?- 151 what is scope chaing <-----hard ----->
+
+// function outerFunction() {
+//   const outerVar = "I am in the outer function";
+
+//   function innerFunction() {
+//     const innerVar = "I am in the inner function";
+
+//     // Accessing innerVar from the inner function's scope
+//     console.log(innerVar);
+
+//     // Accessing outerVar from the inner function's scope
+//     console.log(outerVar);
+//   }
+
+//   // Accessing outerVar from the outer function's scope
+//   console.log(outerVar);
+
+//   // Calling the inner function
+//   innerFunction();
+// }
+
+// // Calling the outer function
+// outerFunction();
+
 //todo ?- 152 <-----hard ----->
 
 // const guessTheAnswer = (arg) => {
@@ -1724,6 +1767,93 @@
 // const data = [1, 2, 3, 4, 5];
 
 // giveFirstElementOfArray(data, 100);
+
+//todo ?- 154 <-----hard ----->
+
+// function test(){
+//   var a = b = 5;
+// }
+
+// test()
+// console.log(b);
+// console.log(a);
+
+//! ?- 155 <-----hard ----->
+
+// let arr = [];
+// for (var i = 0; i < 3; i++) {
+//   arr[i] = function () {
+//     console.log("My value", i);
+//   };
+// }
+
+// arr[0]()
+// arr[1]()
+// arr[2]()
+
+//! ?- 156 <-----hard ----->
+
+// var a = {};
+//  b = { key: "b" };
+//  c = { key: "c" };
+
+// a[c] = 456;
+// a[b] = 123;
+
+// console.log(a[c]);
+
+//! ?- 157 <-----hard ----->
+
+// var a = {};
+//  b = { key: "b" };
+//  c = { key: "c" };
+
+// a[c] = 456;
+// a[b] = 123;
+
+// console.log(a[b]);
+
+// const obj = {
+//   data:[1,2,3],
+//   processData:function(){
+
+//     this.data.forEach((num)=>{
+//         console.log(num*this.factor);
+//     })
+//   },
+//   factor:2
+// }
+
+// obj.processData()
+
+
+
+//todo ?- 158 <-----hard ----->
+//If Inheritance happened then which constructor called first
+
+
+// class Grand {
+//   constructor() {
+//     console.log("grand");
+//   }
+// }
+
+// class Parent extends Grand {
+//   constructor() {
+//     super(); 
+//     console.log("parent");
+//   }
+// }
+
+// class Child extends Parent {
+//   constructor() {
+//     super(); 
+//     console.log("Child");
+//   }
+// }
+
+// const child = new Child();
+
 
 //todo < ------- Interview Question practice -------->
 
@@ -2244,16 +2374,40 @@
 
 //? Q23 : What is binary search give an example
 
-// function flattenArray(arr) {
-//   return arr.reduce((flat, current) => flat.concat(Array.isArray(current) ? flattenArray(current) : current), []);
+
+// function binarySearch(arr, target) {
+//   let low = 0;
+//   let high = arr.length - 1;
+
+//   while (low <= high) {
+//     const mid = Math.floor((low + high) / 2);
+//     const midValue = arr[mid];
+
+//     if (midValue === target) {
+//       return mid; // Element found, return its index
+//     } else if (midValue < target) {
+//       low = mid + 1; // Search in the right half
+//     } else {
+//       high = mid - 1; // Search in the left half
+//     }
+//   }
+
+//   return -1; // Element not found
 // }
 
-// // Example usage
-// let nestedArray = [1, [2, [3, 4], 5], 6];
-// let flattenedArray = flattenArray(nestedArray);
-// console.log(flattenedArray);
+// const sortedArray = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
+// const targetValue = 15;
 
-//? Q24 :Generate Fibonacci Sequence
+// const resultIndex = binarySearch(sortedArray, targetValue);
+
+// if (resultIndex !== -1) {
+//   console.log(`Element ${targetValue} found at index ${resultIndex}.`);
+// } else {
+//   console.log(`Element ${targetValue} not found in the array.`);
+// }
+
+
+//? Q24:Generate Fibonacci Sequence
 //todo => Generating a Fibonacci sequence involves creating a series of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1. The sequence goes: 0, 1, 1, 2, 3, 5, 8, 13, 21, and so on.
 
 // function fibonacci(n) {
@@ -2267,3 +2421,141 @@
 // // Example usage
 // let fibSequence = fibonacci(8);
 // console.log(fibSequence);
+
+//? Q:25 create a program through which you can merge multiple nested arrays in one array
+
+// const arr = [12,2,3,[4,5,4,1,4565,[45,45,5,4,5]]].flat(Infinity)
+// console.log(arr);
+
+//? Q:26 You are giving an array const arr = [2, 3, 4, 9, 11, 0, 23, 24, 27] create a program in which sum of two elements in array equal to x
+
+//todod My own logic
+// const x = 13;
+// let pairData = [];
+
+// const arr = [2, 3, 4, 9, 11, 0, 23, 24, 27];
+// for (let i = 0; i < arr.length; i++) {
+//   let firstEl = arr[i];
+//   for (let j = i + 1; j < arr.length; j++) {
+//     let secondEl = arr[j];
+//     if (firstEl + secondEl === x) {
+//       pairData.push(firstEl, secondEl);
+//     }
+//   }
+// }
+
+// console.log(pairData);
+
+//todo chat gpt logic
+
+// const findPairsWithSum = (arr, x) => {
+//   const pairs = [];
+
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       if (arr[i] + arr[j] === x) {
+//         pairs.push([arr[i], arr[j]]);
+//       }
+//     }
+//   }
+
+//   return pairs;
+// };
+
+// const arr = [2, 3, 4, 9, 11, 0, 23, 24, 27];
+// const x = 27;
+
+// const result = findPairsWithSum(arr, x);
+
+// console.log(`Pairs with sum ${x}:`, result);
+
+//? Q:27 You are giving two objects so create a program in which same key and value from object 1 and object 2 should be present into new object
+
+// const obj1 = { a: 1, b: 2, c: 3, d: 4, e: 5 };
+// const obj2 = { a: 1, b: 20, c: 3, d: 4, e: 50 };
+// const obj3 = {}
+
+// for(let key in obj1){
+//   if (obj1[key] === obj2[key]  ) {
+//     obj3[key] = obj1[key]
+//   }
+// }
+
+// console.log(obj3);
+
+//? Q:28 You are giving multidimention array, find all values eqaual to Lahore if two Lahore then 2 prints("Lahore")
+
+// var array2 = [
+//   ["ali", 26, "fasilabad", "Male", "BSCs"],
+//   ["bali", 24, "pashawar", "Male", "B.Com"],
+//   ["shmai", 23, "Lahore", "Male", "BSSE"],
+//   ["shmai", 23, "Lahore", "Male", "BSSE"],
+//   ["ammad", 22, "islamabad", "Male", "IT"],
+//   ["mani", 20, "karacho", "Male", "SE"],
+// ];
+
+// for (let i = 0; i < array2.length; i++) {
+//   for (let j = 0; j < array2.length; j++) {
+//     let rowData = array2[i][j];
+//     if (rowData === "Lahore") {
+//       console.log(rowData);
+//     }
+//   }
+// }
+
+
+
+//?Q 29:You are given a nested array [1, [2, [3, 4], 5], 6] Create a JavaScript function, flattenArray, to flatten a nested array
+
+// function flattenArray(arr) {
+//   return arr.reduce((flat, current) => flat.concat(Array.isArray(current) ? flattenArray(current) : current), []);
+// }
+
+// // Example usage
+// let nestedArray = [1, [2, [3, 4], 5], 6];
+// let flattenedArray = flattenArray(nestedArray);
+// console.log(flattenedArray);
+
+
+//? Q: 30 You are given an array [1, 2, 3, 4, 2, 1, 4]; Create a JavaScript function, to find unique number from two time repeated array 
+
+// 0^n = n
+// 0^5=5
+
+// n^n=0
+// 5^5=0
+
+
+// function findDuplicate(arr) {
+//   let result = 0;
+
+//   // Use XOR to find the duplicate
+//   for (let i = 0; i < arr.length; i++) {
+//     result = result ^ arr[i];
+//   }
+
+//   return result;
+// }
+
+// const arrayWithDuplicate = [1, 2, 3, 4, 2, 1, 4];
+// const duplicateValue = findDuplicate(arrayWithDuplicate);
+// console.log(`The duplicate value is: ${duplicateValue}`);
+
+
+//? Q: 31 How can i remove a perticular key from array of object
+
+
+// const arrayOfObjects = [
+//   { id: 1, name: 'John', age: 30 },
+//   { id: 2, name: 'Jane', age: 25 },
+//   { id: 3, name: 'Doe', age: 35 },
+//  ];
+ 
+//  const keyToRemove = 'age';
+ 
+//  const updatedArray = arrayOfObjects.map(obj => {
+//   const { [keyToRemove]:_, ...rest } = obj;
+//   return rest;
+//  });
+ 
+//  console.log(updatedArray);

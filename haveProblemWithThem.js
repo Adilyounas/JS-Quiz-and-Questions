@@ -279,6 +279,14 @@
 // console.log(+"2"); //todo hard
 // console.log(+"adil"); //todo hard
 // console.log(+""); //todo hard
+// console.log([]=="");
+// console.log([]==0);
+// console.log([-55]==0);
+// console.log([]==0);
+// console.log([0]==0);
+// console.log([""]=="");
+// console.log([0]=="");
+
 
 //todo <--------------- again practice if there is a problem in it then these following question are also part of have problem with ----------------->
 // console.log(typeof null);

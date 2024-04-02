@@ -5,26 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+
 </head>
+
+<style>
+body {
+  height: 100vh;
+  width: 100%;
+  perspective: 1000px; /* Use a numerical value for perspective */
+}
+
+.container {
+  transform-style: preserve-3d; /* Add this line for 3D effect */
+}
+
+img {
+  width: 600px;
+  transform: rotateX(20deg);
+}
+</style>
 <body>
-  
-  <button id="Previous" onclick="addToWishList(1)">add to cart</button>
-  <button id="Next" onclick="addToWishList(2)">add to cart</button>
-  <button onclick="incrementFun(1)">increment</button>
-  <button onclick="decrementFun(1)">decrement</button>
 
-  <button onclick="incrementFun(2)">increment2</button>
-  <button onclick="decrementFun(2)">decrement2</button>
-  
+  <div class="container">
 
-  <div onclick="console.log('first div')">
-    <div onclick="console.log('second div')">
-      <button onclick="console.log('button')"> 
-        Click
-      </button>
-    </div>
+    <img src="./hanna kimura.jpg" alt="">
   </div>
 
+
+
+  <button onclick="printing()">Sarea</button>
 
 <!-- <script src="notes.js"></script> -->
 <!-- <script src="haveProblemWithThem.js"></script>   -->
